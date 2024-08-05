@@ -106,7 +106,7 @@ resource "aws_key_pair" "deployer" {
   key_name   = "indus-key-name"
   public_key = var.public_key
 }
-
+/*
 # Elastic IP
 resource "aws_eip" "lb" {
   domain = "vpc"
@@ -120,3 +120,4 @@ resource "aws_eip" "lb" {
 output "public-ip" {
   value = aws_eip.lb.public_ip
 }
+*/
