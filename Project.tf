@@ -92,7 +92,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "my_ec2" {
   ami                  = data.aws_ami.ubuntu.id
   instance_type        = var.instance_size
-  key_name             = "indus-key-name"
+  key_name             = aws_key_pair.deployer.key_name #"indus-key-name"
   vpc_security_group_ids = [aws_security_group.main.id]
   subnet_id            = aws_subnet.main.id
 
